@@ -1,0 +1,6 @@
+/abort/
+/share/
+/src/data
+/src/modelfile
+*__pycache__*
+

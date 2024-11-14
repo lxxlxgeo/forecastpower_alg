@@ -1,0 +1,225 @@
+
+EnvironmentLocationNotFound: Not a conda environment: /mnt/public/home/wasp_dpm/yl_dir/env/miniconda3/envs/forecast_power_gpu
+
+
+Decompressing files:   0%|          | 0/66 [00:00<?, ?file/s]
+Decompressing files: 100%|██████████| 66/66 [00:00<00:00, 10819.36file/s]
+
+/public4/dataset_yl/forecastpower/nwp_grib/2024111300
+/mnt/xxdata/wlzx_model/raw/babj/ecmwf/hres_9km/achn/20241113/00
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+文件已解压!!!
+所有文件解压完成。
+
+
+Decompressing files:   0%|          | 0/66 [00:00<?, ?file/s]
+Decompressing files:   2%|▏         | 1/66 [00:20<22:22, 20.66s/file]
+Decompressing files:   3%|▎         | 2/66 [00:42<23:04, 21.63s/file]
+Decompressing files:   5%|▍         | 3/66 [01:01<21:19, 20.32s/file]
+Decompressing files:   6%|▌         | 4/66 [01:22<21:16, 20.59s/file]
+Decompressing files:   8%|▊         | 5/66 [01:41<20:18, 19.97s/file]
+Decompressing files:   9%|▉         | 6/66 [01:58<19:01, 19.02s/file]
+Decompressing files:  11%|█         | 7/66 [02:19<19:13, 19.55s/file]
+Decompressing files:  12%|█▏        | 8/66 [02:40<19:15, 19.92s/file]
+Decompressing files:  14%|█▎        | 9/66 [02:58<18:35, 19.57s/file]
+Decompressing files:  15%|█▌        | 10/66 [03:18<18:14, 19.54s/file]
+Decompressing files:  17%|█▋        | 11/66 [03:35<17:10, 18.73s/file]
+Decompressing files:  18%|█▊        | 12/66 [03:53<16:43, 18.58s/file]
+Decompressing files:  20%|█▉        | 13/66 [04:14<17:07, 19.38s/file]
+Decompressing files:  21%|██        | 14/66 [04:31<15:58, 18.43s/file]
+Decompressing files:  23%|██▎       | 15/66 [04:48<15:22, 18.08s/file]
+Decompressing files:  24%|██▍       | 16/66 [05:03<14:20, 17.20s/file]
+Decompressing files:  26%|██▌       | 17/66 [05:23<14:38, 17.92s/file]
+Decompressing files:  27%|██▋       | 18/66 [05:39<14:03, 17.58s/file]
+Decompressing files:  29%|██▉       | 19/66 [06:00<14:23, 18.37s/file]
+Decompressing files:  30%|███       | 20/66 [06:20<14:30, 18.93s/file]
+Decompressing files:  32%|███▏      | 21/66 [06:39<14:14, 18.98s/file]
+Decompressing files:  33%|███▎      | 22/66 [06:58<14:02, 19.14s/file]
+Decompressing files:  35%|███▍      | 23/66 [07:19<14:03, 19.62s/file]
+Decompressing files:  36%|███▋      | 24/66 [07:37<13:19, 19.03s/file]
+Decompressing files:  38%|███▊      | 25/66 [07:54<12:40, 18.55s/file]
+Decompressing files:  39%|███▉      | 26/66 [08:15<12:43, 19.09s/file]
+Decompressing files:  41%|████      | 27/66 [08:35<12:37, 19.41s/file]
+Decompressing files:  42%|████▏     | 28/66 [08:53<12:10, 19.22s/file]
+Decompressing files:  44%|████▍     | 29/66 [09:21<13:21, 21.67s/file]
+Decompressing files:  45%|████▌     | 30/66 [09:42<12:50, 21.40s/file]
+Decompressing files:  47%|████▋     | 31/66 [10:01<12:07, 20.78s/file]
+Decompressing files:  48%|████▊     | 32/66 [10:22<11:44, 20.72s/file]
+Decompressing files:  50%|█████     | 33/66 [10:41<11:06, 20.19s/file]
+Decompressing files:  52%|█████▏    | 34/66 [10:56<09:58, 18.69s/file]
+Decompressing files:  53%|█████▎    | 35/66 [11:15<09:46, 18.91s/file]
+Decompressing files:  55%|█████▍    | 36/66 [11:34<09:30, 19.03s/file]
+Decompressing files:  56%|█████▌    | 37/66 [11:55<09:27, 19.58s/file]
+Decompressing files:  58%|█████▊    | 38/66 [12:15<09:11, 19.71s/file]
+Decompressing files:  59%|█████▉    | 39/66 [12:36<08:59, 19.99s/file]
+Decompressing files:  61%|██████    | 40/66 [12:55<08:32, 19.71s/file]
+Decompressing files:  62%|██████▏   | 41/66 [13:15<08:17, 19.91s/file]
+Decompressing files:  64%|██████▎   | 42/66 [13:33<07:40, 19.17s/file]
+Decompressing files:  65%|██████▌   | 43/66 [13:51<07:13, 18.86s/file]
+Decompressing files:  67%|██████▋   | 44/66 [14:09<06:48, 18.55s/file]
+Decompressing files:  68%|██████▊   | 45/66 [14:26<06:19, 18.09s/file]
+Decompressing files:  70%|██████▉   | 46/66 [14:44<06:00, 18.01s/file]
+Decompressing files:  71%|███████   | 47/66 [15:02<05:46, 18.24s/file]
+Decompressing files:  73%|███████▎  | 48/66 [15:24<05:45, 19.21s/file]
+Decompressing files:  74%|███████▍  | 49/66 [15:42<05:21, 18.88s/file]
+Decompressing files:  76%|███████▌  | 50/66 [16:02<05:06, 19.15s/file]
+Decompressing files:  77%|███████▋  | 51/66 [16:21<04:49, 19.28s/file]
+Decompressing files:  79%|███████▉  | 52/66 [16:42<04:36, 19.78s/file]
+Decompressing files:  80%|████████  | 53/66 [17:03<04:18, 19.91s/file]
+Decompressing files:  82%|████████▏ | 54/66 [17:19<03:47, 18.95s/file]
+Decompressing files:  83%|████████▎ | 55/66 [17:40<03:33, 19.37s/file]
+Decompressing files:  85%|████████▍ | 56/66 [17:59<03:14, 19.49s/file]
+Decompressing files:  86%|████████▋ | 57/66 [18:19<02:55, 19.46s/file]
+Decompressing files:  88%|████████▊ | 58/66 [18:39<02:36, 19.55s/file]
+Decompressing files:  89%|████████▉ | 59/66 [18:57<02:15, 19.34s/file]
+Decompressing files:  91%|█████████ | 60/66 [19:22<02:05, 20.97s/file]
+Decompressing files:  92%|█████████▏| 61/66 [19:43<01:44, 20.90s/file]
+Decompressing files:  94%|█████████▍| 62/66 [20:04<01:23, 20.88s/file]
+Decompressing files:  95%|█████████▌| 63/66 [20:24<01:01, 20.58s/file]
+Decompressing files:  97%|█████████▋| 64/66 [20:43<00:40, 20.11s/file]
+Decompressing files:  98%|█████████▊| 65/66 [21:05<00:20, 20.68s/file]
+Decompressing files: 100%|██████████| 66/66 [21:22<00:00, 19.64s/file]
+Decompressing files: 100%|██████████| 66/66 [21:22<00:00, 19.43s/file]
+
+/public4/dataset_yl/forecastpower/nwp_grib/2024111312
+/mnt/xxdata/wlzx_model/raw/babj/ecmwf/hres_9km/achn/20241113/12
+所有文件解压完成。
+
+
+Decompressing files:   0%|          | 0/66 [00:00<?, ?file/s]
+Decompressing files:   2%|▏         | 1/66 [00:42<45:38, 42.14s/file]
+Decompressing files:   3%|▎         | 2/66 [01:19<42:11, 39.55s/file]
+Decompressing files:   5%|▍         | 3/66 [02:03<43:36, 41.53s/file]
+Decompressing files:   6%|▌         | 4/66 [02:42<41:51, 40.50s/file]
+Decompressing files:   8%|▊         | 5/66 [03:25<41:56, 41.25s/file]
+Decompressing files:   9%|▉         | 6/66 [04:09<42:10, 42.18s/file]
+Decompressing files:  11%|█         | 7/66 [04:50<41:01, 41.72s/file]
+Decompressing files:  12%|█▏        | 8/66 [05:34<41:11, 42.62s/file]
+Decompressing files:  14%|█▎        | 9/66 [06:23<42:29, 44.74s/file]
+Decompressing files:  15%|█▌        | 10/66 [07:03<40:11, 43.06s/file]
+Decompressing files:  17%|█▋        | 11/66 [07:37<36:54, 40.27s/file]
+Decompressing files:  18%|█▊        | 12/66 [08:16<35:59, 40.00s/file]
+Decompressing files:  20%|█▉        | 13/66 [08:54<34:43, 39.31s/file]
+Decompressing files:  21%|██        | 14/66 [09:49<38:12, 44.09s/file]
+Decompressing files:  23%|██▎       | 15/66 [10:31<36:52, 43.39s/file]
+Decompressing files:  24%|██▍       | 16/66 [11:10<35:11, 42.22s/file]
+Decompressing files:  26%|██▌       | 17/66 [11:58<35:57, 44.02s/file]
+Decompressing files:  27%|██▋       | 18/66 [12:46<36:01, 45.03s/file]
+Decompressing files:  29%|██▉       | 19/66 [13:24<33:37, 42.92s/file]
+Decompressing files:  30%|███       | 20/66 [14:04<32:15, 42.07s/file]
+Decompressing files:  32%|███▏      | 21/66 [14:52<32:49, 43.77s/file]
+Decompressing files:  33%|███▎      | 22/66 [15:31<31:09, 42.48s/file]
+Decompressing files:  35%|███▍      | 23/66 [16:10<29:38, 41.37s/file]
+Decompressing files:  36%|███▋      | 24/66 [16:50<28:47, 41.14s/file]
+Decompressing files:  38%|███▊      | 25/66 [17:25<26:44, 39.14s/file]
+Decompressing files:  39%|███▉      | 26/66 [18:03<25:56, 38.91s/file]
+Decompressing files:  41%|████      | 27/66 [18:43<25:31, 39.26s/file]
+Decompressing files:  42%|████▏     | 28/66 [19:29<25:59, 41.04s/file]
+Decompressing files:  44%|████▍     | 29/66 [20:10<25:17, 41.00s/file]
+Decompressing files:  45%|████▌     | 30/66 [20:51<24:42, 41.18s/file]
+Decompressing files:  47%|████▋     | 31/66 [21:36<24:43, 42.39s/file]
+Decompressing files:  48%|████▊     | 32/66 [22:20<24:14, 42.77s/file]
+Decompressing files:  50%|█████     | 33/66 [22:58<22:41, 41.26s/file]
+Decompressing files:  52%|█████▏    | 34/66 [23:52<24:04, 45.15s/file]
+Decompressing files:  53%|█████▎    | 35/66 [24:36<23:12, 44.93s/file]
+Decompressing files:  55%|█████▍    | 36/66 [25:21<22:21, 44.71s/file]
+Decompressing files:  56%|█████▌    | 37/66 [26:06<21:41, 44.87s/file]
+Decompressing files:  58%|█████▊    | 38/66 [26:56<21:40, 46.44s/file]
+Decompressing files:  59%|█████▉    | 39/66 [27:34<19:47, 43.99s/file]
+Decompressing files:  61%|██████    | 40/66 [28:22<19:30, 45.04s/file]
+Decompressing files:  62%|██████▏   | 41/66 [28:50<16:41, 40.07s/file]
+Decompressing files:  64%|██████▎   | 42/66 [29:40<17:13, 43.06s/file]
+Decompressing files:  65%|██████▌   | 43/66 [30:30<17:20, 45.23s/file]
+Decompressing files:  67%|██████▋   | 44/66 [31:14<16:21, 44.63s/file]
+Decompressing files:  68%|██████▊   | 45/66 [32:10<16:48, 48.01s/file]
+Decompressing files:  70%|██████▉   | 46/66 [32:59<16:08, 48.44s/file]
+Decompressing files:  71%|███████   | 47/66 [33:57<16:15, 51.32s/file]
+Decompressing files:  73%|███████▎  | 48/66 [34:45<15:04, 50.27s/file]
+Decompressing files:  74%|███████▍  | 49/66 [35:34<14:08, 49.88s/file]
+Decompressing files:  76%|███████▌  | 50/66 [36:15<12:38, 47.38s/file]
+Decompressing files:  77%|███████▋  | 51/66 [37:03<11:50, 47.38s/file]
+Decompressing files:  79%|███████▉  | 52/66 [37:37<10:09, 43.54s/file]
+Decompressing files:  80%|████████  | 53/66 [38:17<09:11, 42.43s/file]
+Decompressing files:  82%|████████▏ | 54/66 [38:53<08:05, 40.44s/file]
+Decompressing files:  83%|████████▎ | 55/66 [39:50<08:19, 45.38s/file]
+Decompressing files:  85%|████████▍ | 56/66 [40:30<07:18, 43.81s/file]
+Decompressing files:  86%|████████▋ | 57/66 [41:19<06:48, 45.36s/file]
+Decompressing files:  88%|████████▊ | 58/66 [42:05<06:03, 45.45s/file]
+Decompressing files:  89%|████████▉ | 59/66 [42:51<05:19, 45.64s/file]
+Decompressing files:  91%|█████████ | 60/66 [43:37<04:34, 45.69s/file]
+Decompressing files:  92%|█████████▏| 61/66 [44:21<03:46, 45.39s/file]
+Decompressing files:  94%|█████████▍| 62/66 [45:06<03:01, 45.33s/file]
+Decompressing files:  95%|█████████▌| 63/66 [45:50<02:14, 44.73s/file]
+Decompressing files:  97%|█████████▋| 64/66 [46:30<01:26, 43.33s/file]
+Decompressing files:  98%|█████████▊| 65/66 [47:07<00:41, 41.54s/file]
+Decompressing files: 100%|██████████| 66/66 [47:45<00:00, 40.48s/file]
+Decompressing files: 100%|██████████| 66/66 [47:45<00:00, 43.42s/file]
+
+/public4/dataset_yl/forecastpower/nwp_grib/2024111400
+/mnt/xxdata/wlzx_model/raw/babj/ecmwf/hres_9km/achn/20241114/00
+所有文件解压完成。
+
