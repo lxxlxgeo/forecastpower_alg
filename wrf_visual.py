@@ -1,17 +1,16 @@
-
 import os,re
 import pandas as pd
 import datetime
 import numpy as np
 # from config.config import *
-from src.region_data.d1d_read import get_region_data
+from src.region_data.wrf_read import get_region_data
 from config.config import time_now,time_now_str
 import pickle, shutil
 from tqdm import tqdm
 from src.logging_tool import Logger
 from src.call_api2 import call_api
 import warnings
-from config.vision_config import *
+from config.vision_config import outprefix_wrf,visual_total,runlogPath,wrf_path
 warnings.filterwarnings('ignore')
 from data_version.draw_data import Plotter
 from data_version.color_config import * 
@@ -79,7 +78,7 @@ def draw_data_to_map(session,extent,nwppath):
     )
     
     
-    subdirectories = solar_plotter.create_subdirectories(outprefix,file_bjt_time.strftime('%Y%m%d%H'))
+    subdirectories = solar_plotter.create_subdirectories(outprefix_wrf,file_bjt_time.strftime('%Y%m%d%H'))
     for subdirectory in subdirectories.values():
         os.makedirs(subdirectory, exist_ok=True)
     
@@ -99,31 +98,31 @@ def draw_data_to_map(session,extent,nwppath):
         t2m_pngname=f"t2_{bjt_idate.strftime('%Y%m%d%H')}_forecast" + '.png' #2米气温
         
         #以下是批量替换文件名的程序
-        solar_png=solar_plotter.get_output_file_path(outprefix,solar_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H'))
+        solar_png=solar_plotter.get_output_file_path(outprefix_wrf,solar_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H'))
         solar_txt=solar_png.replace('.png','.txt')
         solar_png_s=solar_png.replace('.png','_s.png')
         solar_csv=solar_png.replace('.png','.csv')
         
         
         
-        winds10_png=wins_plotter.get_output_file_path(outprefix,winds10_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
+        winds10_png=wins_plotter.get_output_file_path(outprefix_wrf,winds10_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
         winds10_txt=winds10_png.replace('.png','.txt')
         winds10_png_s=winds10_png.replace('.png','_s.png')
         winds10_csv=winds10_png.replace('.png','.csv')
         
-        winds100_png=wins_plotter.get_output_file_path(outprefix,winds100_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
+        winds100_png=wins_plotter.get_output_file_path(outprefix_wrf,winds100_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
         winds100_txt=winds100_png.replace('.png','.txt')
         winds100_png_s=winds100_png.replace('.png','_s.png')
         winds100_csv=winds100_png.replace('.png','.csv')
         
         
-        rh2_png=d2m_plotter.get_output_file_path(outprefix,rh2_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
-        rh2_txt=rh2_png.replace('.png','.txt')
-        rh2_png_s=rh2_png.replace('.png','_s.png')
-        rh2_csv=rh2_png.replace('.png','.csv')
+        # rh2_png=d2m_plotter.get_output_file_path(outprefix_wrf,rh2_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
+        # rh2_txt=rh2_png.replace('.png','.txt')
+        # rh2_png_s=rh2_png.replace('.png','_s.png')
+        # rh2_csv=rh2_png.replace('.png','.csv')
         
         
-        t2m_png=t2m_plotter.get_output_file_path(outprefix,t2m_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
+        t2m_png=t2m_plotter.get_output_file_path(outprefix_wrf,t2m_pngname,forecast_cycle=file_bjt_time.strftime('%Y%m%d%H')) 
         t2m_txt=t2m_png.replace('.png','.txt')
         t2m_png_s=t2m_png.replace('.png','_s.png')
         t2m_csv=t2m_png.replace('.png','.csv')
@@ -139,30 +138,30 @@ def draw_data_to_map(session,extent,nwppath):
         df_item['rh2_df']=rh2_df
         '''
         
-        solar_plotter.plot_map_simple(lon,lat,inwp[0,:,:],solar_cmap,soalr_norm,solar_png)  #辐照度
-        solar_plotter.plot_map_simple(lon,lat,inwp[0,:,:],solar_cmap,soalr_norm,solar_png_s,True)  #辐照度邮票图
+        solar_plotter.plot_map_simple(lon,lat,np.flipud(inwp[0,:,:]),solar_cmap,soalr_norm,solar_png)  #辐照度
+        solar_plotter.plot_map_simple(lon,lat,np.flipud(inwp[0,:,:]),solar_cmap,soalr_norm,solar_png_s,True)  #辐照度邮票图
         icoor['ssrd'].to_csv(solar_csv,index=False,encoding='utf-8-sig') #辐照度csv
-        convert_source_totext(lon,lat,inwp[0,:,:],solar_txt) #
+        convert_source_totext(lon,lat,np.flipud(inwp[0,:,:]),solar_txt) #
 
-        wins_plotter.plot_map_simple(lon,lat,inwp[1,:,:],wins_cmap,wins_norm,winds10_png) #10米风速
-        wins_plotter.plot_map_simple(lon,lat,inwp[1,:,:],wins_cmap,wins_norm,winds10_png_s,True) #10米风速
+        wins_plotter.plot_map_simple(lon,lat,np.flipud(inwp[1,:,:]),wins_cmap,wins_norm,winds10_png) #10米风速
+        wins_plotter.plot_map_simple(lon,lat,np.flipud(inwp[1,:,:]),wins_cmap,wins_norm,winds10_png_s,True) #10米风速
         icoor['wind_speed10'].to_csv(winds10_csv,index=False,encoding='utf-8-sig') #辐照度csv
-        convert_source_totext(lon,lat,inwp[1,:,:],winds10_txt)
+        convert_source_totext(lon,lat,np.flipud(inwp[1,:,:]),winds10_txt)
         
-        wins_plotter.plot_map_simple(lon,lat,inwp[2,:,:],wins_cmap,wins_norm,winds100_png) #100米风速
-        wins_plotter.plot_map_simple(lon,lat,inwp[2,:,:],wins_cmap,wins_norm,winds100_png_s,True) #100米风速
+        wins_plotter.plot_map_simple(lon,lat,np.flipud(inwp[2,:,:]),wins_cmap,wins_norm,winds100_png) #100米风速
+        wins_plotter.plot_map_simple(lon,lat,np.flipud(inwp[2,:,:]),wins_cmap,wins_norm,winds100_png_s,True) #100米风速
         icoor['wind_speed100'].to_csv(winds100_csv,index=False,encoding='utf-8-sig') #辐照度csv
-        convert_source_totext(lon,lat,inwp[2,:,:],winds100_txt)
+        convert_source_totext(lon,lat,np.flipud(inwp[2,:,:]),winds100_txt)
         
-        d2m_plotter.plot_map_simple(lon,lat,inwp[4,:,:],rh_cmap,rh_norm,rh2_png) #2米相对湿度 
-        d2m_plotter.plot_map_simple(lon,lat,inwp[4,:,:],rh_cmap,rh_norm,rh2_png_s,True) #2米相对湿度 
-        icoor['rh2_df'].to_csv(rh2_csv,index=False,encoding='utf-8-sig') #辐照度csv
-        convert_source_totext(lon,lat,inwp[4,:,:],rh2_txt)
+        # d2m_plotter.plot_map_simple(lon,lat,inwp[4,:,:],rh_cmap,rh_norm,rh2_png) #2米相对湿度 
+        # d2m_plotter.plot_map_simple(lon,lat,inwp[4,:,:],rh_cmap,rh_norm,rh2_png_s,True) #2米相对湿度 
+        # icoor['rh2_df'].to_csv(rh2_csv,index=False,encoding='utf-8-sig') #辐照度csv
+        # convert_source_totext(lon,lat,inwp[4,:,:],rh2_txt)
         
-        t2m_plotter.plot_map_simple(lon,lat,inwp[3,:,:],temperature_cmap,temp_norm,t2m_png) #2米气气温
-        t2m_plotter.plot_map_simple(lon,lat,inwp[3,:,:],temperature_cmap,temp_norm,t2m_png_s,True) #2米气气温
+        t2m_plotter.plot_map_simple(lon,lat,np.flipud(inwp[3,:,:]),temperature_cmap,temp_norm,t2m_png) #2米气气温
+        t2m_plotter.plot_map_simple(lon,lat,np.flipud(inwp[3,:,:]),temperature_cmap,temp_norm,t2m_png_s,True) #2米气气温
         icoor['t2m'].to_csv(t2m_csv,index=False,encoding='utf-8-sig') #辐照度csv
-        convert_source_totext(lon,lat,inwp[3,:,:],t2m_txt)
+        convert_source_totext(lon,lat,np.flipud(inwp[3,:,:]),t2m_txt)
         # print(lon.min())
         # print(lon.max())
         # print(lat.min())
@@ -185,20 +184,20 @@ def draw_data_to_map(session,extent,nwppath):
         update_time = Column(DateTime, comment='修改时间')
         '''
         entity=QxRegionTable(
-            yb_type=1,
-            data_from_id=1,
+            yb_type=0,
+            data_from_id=0,
             fb_time=file_bjt_time,
             data_time=bjt_idate,
-            solar_path=solar_png.replace(outprefix,'/draw_img'),
-            solar_s_path=solar_png_s.replace(outprefix,'/draw_img'),
-            temp_path=t2m_png.replace(outprefix,'/draw_img'),
-            temp_s_path=t2m_png_s.replace(outprefix,'/draw_img'),
-            pre_path=rh2_png.replace(outprefix,'/draw_img'),
-            pre_s_path=rh2_png_s.replace(outprefix,'/draw_img'),
-            wind10_path=winds10_png.replace(outprefix,'/draw_img'),
-            wind10_s_path=winds10_png_s.replace(outprefix,'/draw_img'),
-            wind100_path=winds100_png.replace(outprefix,'/draw_img'),
-            wind100_s_path=winds100_png_s.replace(outprefix,'/draw_img'),
+            solar_path=solar_png.replace(outprefix_wrf,'/regiondraw_img'),
+            solar_s_path=solar_png_s.replace(outprefix_wrf,'/regiondraw_img'),
+            temp_path=t2m_png.replace(outprefix_wrf,'/regiondraw_img'),
+            temp_s_path=t2m_png_s.replace(outprefix_wrf,'/regiondraw_img'),
+            # pre_path=rh2_png.replace(outprefix_wrf,'/regiondraw_img'),
+            # pre_s_path=rh2_png_s.replace(outprefix_wrf,'/regiondraw_img'),
+            wind10_path=winds10_png.replace(outprefix_wrf,'/regiondraw_img'),
+            wind10_s_path=winds10_png_s.replace(outprefix_wrf,'/regiondraw_img'),
+            wind100_path=winds100_png.replace(outprefix_wrf,'/regiondraw_img'),
+            wind100_s_path=winds100_png_s.replace(outprefix_wrf,'/regiondraw_img'),
             create_time=datetime.datetime.now()
         )
         session.merge(entity)
@@ -236,7 +235,7 @@ if __name__=='__main__':
     #     time_now_str = time_now.strftime('%Y%m%d0800')
         
     session=GetSession()
-    draw_data_to_map(session,visual_total,ec_path)
+    draw_data_to_map(session,visual_total,wrf_path)
     session.close()
         #current_time=current_time+datetime.timedelta(days=1)
         #gc.collect()

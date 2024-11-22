@@ -3,4 +3,6 @@
 /src/data
 /src/modelfile
 *__pycache__*
+*.pth*
+
 
